@@ -48,7 +48,6 @@ const viewports = {
 }
 
 addParameters({
-  vi
 });
 
 export const parameters = {
