@@ -2,10 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const a = 'asodjo';
-
 function App() {
-  console.log('sjdoaj');
   return (
     <div className="App">
       <header className="App-header">
