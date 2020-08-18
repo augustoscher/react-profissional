@@ -1,15 +1,11 @@
 import React from 'react';
+import './Hero.css';
 
-const Hero = () => (
+const Hero = ({ title, children }) => (
   <div>
     <div>
-      <h1>LRM Colheitas</h1>
-      <ul>
-        <li>Lorem Ipsum</li>
-        <li>Oiado lorem as</li>
-        <li>Niasoa ein asles</li>
-      </ul>
-      <button>Entre em contato</button>
+      <h1>{title}</h1>
+      {children}
     </div>
   </div>
 );
