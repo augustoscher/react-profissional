@@ -1,10 +1,7 @@
 import React from 'react';
 
-const a = 'asoi';
-
 const Hero = () => (
   <div>
-    {console.log(a)}
     <div>
       <h1>LRM Colheitas</h1>
       <ul>
