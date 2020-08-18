@@ -2,7 +2,6 @@
   "env": {
     "browser": true,
     "es2020": true,
-    "jest": true,
     "node": true
   },
   "settings": {
@@ -24,8 +23,7 @@
   },
   "plugins": [
     "react",
-    "react-hooks",
-    "css-in-js"
+    "react-hooks"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",

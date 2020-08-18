@@ -26,7 +26,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*": [
+    "*.+(js|jsx)": [
       "yarn lint --fix"
     ]
   },
@@ -43,14 +43,14 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.7.0",
+    "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-css-in-js": "^1.0.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "husky": "^4.2.5",
-    "jest": "^26.4.0",
+    "jest": "24.9.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   }
