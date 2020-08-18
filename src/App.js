@@ -2,9 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const a = 'asd';
-
 function App() {
+  const a = 'aosijsoijao';
   return (
     <div className="App">
       <header className="App-header">
