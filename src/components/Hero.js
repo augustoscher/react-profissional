@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -21,8 +20,10 @@ const Content = styled.div`
     padding-left: 0;
   }
 
-  li::before {
-    content: '\2713\0020';
+  li {
+    &::before {
+      content: '\\2713\\0020';
+    }
   }
 `;
 
