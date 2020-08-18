@@ -1,5 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import BgSoyHarvestImage from './assets/soy-harvest.jpg';
+import BgFieldImage from './assets/field.jpg';
 
 export default {
   title: 'Hero',
@@ -7,13 +9,13 @@ export default {
 };
 
 export const usage = () => (
-  <Hero title="LRM Colheitas">
+  <Hero image={BgFieldImage} title="LRM Colheitas">
     <p>Oi</p>
   </Hero>
 );
 
 export const withList = () => (
-  <Hero title="LRM Colheitas">
+  <Hero image={BgSoyHarvestImage} title="LRM Colheitas">
     <ul>
       <li>Lorem Ipsum</li>
       <li>Oiado lorem as</li>
