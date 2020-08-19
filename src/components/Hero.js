@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { breakAt, BreakpointSize } from './Breakpoints';
+import { breakAt, BreakpointSize } from '../styles/Breakpoints';
 
 const collorYellow = '#ffc107';
 
@@ -55,7 +55,6 @@ const Content = styled.div`
 const Hero = ({ image, children }) => (
   <Root image={image}>
     <Container>
-      {/* <Title>{title}</Title> */}
       <Content>{children}</Content>
     </Container>
   </Root>
