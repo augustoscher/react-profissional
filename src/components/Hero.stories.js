@@ -5,7 +5,7 @@ import BgFieldImage from '../stories/assets/field.jpg';
 import Heading from './Heading';
 
 export default {
-  title: 'Hero',
+  title: 'Components/Hero',
   component: Hero,
 };
 
