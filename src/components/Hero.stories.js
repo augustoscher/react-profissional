@@ -1,4 +1,6 @@
 import React from 'react';
+import { text } from '@storybook/addon-knobs';
+
 import Hero from './Hero';
 import BgSoyHarvestImage from '../stories/assets/soy-harvest.jpg';
 import BgFieldImage from '../stories/assets/field.jpg';
@@ -13,11 +15,12 @@ export const usage = () => (
   <Hero image={BgFieldImage} title="A sua melhor escolha é ">
     <Heading>
       <h1>
-        Soluções de plantio e colheita <br />é na <strong>LLM</strong>{' '}
-        Agricultura
+        {text('Title', 'Soluções de plantio e colheita é na LLM Agricultura')}
       </h1>
     </Heading>
-    <p>Oi</p>
+    <p>
+      {text('Text', 'Serviço de preparação de terreno, colheita e plantio.')}
+    </p>
   </Hero>
 );
 
@@ -25,7 +28,7 @@ export const withList = () => (
   <Hero image={BgSoyHarvestImage}>
     <Heading>
       <h1>
-        Soluções de plantio e colheita <br />é na <strong>TR</strong>{' '}
+        Soluções de plantio e colheita <br />é na <strong>LLM</strong>{' '}
         Agricultura
       </h1>
     </Heading>

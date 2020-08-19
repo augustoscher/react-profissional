@@ -11,5 +11,6 @@ module.exports = {
     '@storybook/preset-create-react-app',
     '@storybook/addon-viewport',
     '@storybook/addon-docs',
+    '@storybook/addon-knobs',
   ],
 };
