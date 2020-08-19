@@ -1,8 +1,8 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import BgSoyHarvestImage from './assets/soy-harvest.jpg';
-import BgFieldImage from './assets/field.jpg';
-import Heading from '../components/Heading';
+import Hero from './Hero';
+import BgSoyHarvestImage from '../stories/assets/soy-harvest.jpg';
+import BgFieldImage from '../stories/assets/field.jpg';
+import Heading from './Heading';
 
 export default {
   title: 'Hero',
