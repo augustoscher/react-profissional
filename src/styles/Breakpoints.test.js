@@ -5,6 +5,6 @@ test.each([
   [BreakpointSizes.md],
   [BreakpointSizes.lg],
   [BreakpointSizes.xl],
-])('BreakAt %i', size => {
+])('BreakAt %ipx', size => {
   expect(breakAt(size)).toEqual(`@media (min-width: ${size}px)`);
 });
