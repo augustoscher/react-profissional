@@ -80,3 +80,36 @@ export const outlined = () => (
     </div>
   </div>
 );
+
+export const linked = () => (
+  <div>
+    <div>
+      <p>Enabled:</p>
+      <Toolbar>
+        <Button variant="linked" {...events}>
+          Default
+        </Button>
+        <Button variant="linked" color="primary" {...events}>
+          Primary
+        </Button>
+        <Button variant="linked" color="danger" {...events}>
+          Danger
+        </Button>
+      </Toolbar>
+    </div>
+    <div>
+      <p>Disabled:</p>
+      <Toolbar>
+        <Button variant="linked" disabled {...events}>
+          Default
+        </Button>
+        <Button variant="linked" disabled color="primary" {...events}>
+          Primary
+        </Button>
+        <Button variant="linked" disabled color="danger" {...events}>
+          Danger
+        </Button>
+      </Toolbar>
+    </div>
+  </div>
+);

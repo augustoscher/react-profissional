@@ -45,6 +45,13 @@ const getOutlinedText = props => {
   return getMainColor(props);
 };
 
+const getLinkedText = props => {
+  if (props.color === ButtonCollors.default) {
+    return '#757575';
+  }
+  return getMainColor(props);
+};
+
 const Button = styled.button`
   font-size: 1rem;
   font-weight: 600;
@@ -76,11 +83,27 @@ const ButtonOutlined = styled(Button)`
   }
 `;
 
+const ButtonLinked = styled(Button)`
+  background-color: transparent;
+  border-color: transparent;
+  color: ${getLinkedText};
+  padding-left: 0;
+  padding-right: 0;
+
+  &:hover:enabled {
+    background-color: transparent;
+    border-color: transparent;
+    color: ${getDarkColor};
+  }
+`;
+
 // just because storybook dont support styled components props
 const ButtonWrapper = props => {
   switch (props.variant) {
     case ButtonVariants.outlined:
       return <ButtonOutlined {...props} />;
+    case ButtonVariants.linked:
+      return <ButtonLinked {...props} />;
     default:
       return <Button {...props} />;
   }
