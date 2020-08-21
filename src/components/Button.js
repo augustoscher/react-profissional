@@ -8,6 +8,12 @@ const ButtonCollors = {
   danger: 'danger',
 };
 
+const ButtonVariants = {
+  default: 'default',
+  outlined: 'outlined',
+  linked: 'linked',
+};
+
 const getDarkColor = ({ theme, color }) => {
   switch (color) {
     case ButtonCollors.primary:
@@ -32,6 +38,13 @@ const getMainColor = ({ theme, color }) => {
 
 const getColorText = props => props.theme.collors.primary.text;
 
+const getOutlinedText = props => {
+  if (props.color === ButtonCollors.default) {
+    return '#212121';
+  }
+  return getMainColor(props);
+};
+
 const Button = styled.button`
   font-size: 1rem;
   font-weight: 600;
@@ -53,8 +66,25 @@ const Button = styled.button`
   }
 `;
 
+const ButtonOutlined = styled(Button)`
+  background-color: transparent;
+  color: ${getOutlinedText};
+
+  &:hover:enabled {
+    background-color: transparent;
+    color: ${getDarkColor};
+  }
+`;
+
 // just because storybook dont support styled components props
-const ButtonWrapper = props => <Button {...props} />;
+const ButtonWrapper = props => {
+  switch (props.variant) {
+    case ButtonVariants.outlined:
+      return <ButtonOutlined {...props} />;
+    default:
+      return <Button {...props} />;
+  }
+};
 
 ButtonWrapper.defaultProps = {
   type: 'button',
@@ -66,6 +96,7 @@ ButtonWrapper.propTypes = {
   type: PropTypes.string,
   children: PropTypes.node,
   color: PropTypes.oneOf(Object.values(ButtonCollors)),
+  variant: PropTypes.oneOf(Object.values(ButtonVariants)),
 };
 
 export default ButtonWrapper;
