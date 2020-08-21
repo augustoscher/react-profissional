@@ -1,5 +1,25 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
+const ButtonCollors = {
+  default: 'default',
+  primary: 'primary',
+  danger: 'danger',
+};
+
+const getMainColor = ({ theme, color }) => {
+  switch (color) {
+    case ButtonCollors.primary:
+      return theme.collors.primary.main;
+    case ButtonCollors.danger:
+      return theme.collors.danger.main;
+    default:
+      return '#e0e0e0';
+  }
+};
+
+const getColorText = props => props.theme.collors.primary.text;
 
 const Button = styled.button`
   font-size: 1rem;
@@ -7,19 +27,24 @@ const Button = styled.button`
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
-  background-color: #ffc107;
-  border: 2px solid #ffc107;
-  color: #212121;
+  background-color: ${getMainColor};
+  border: 2px solid ${getMainColor};
+  color: ${getColorText};
 `;
 
-Button.defaultProps = {
+// just because storybook dont support styled components props
+const ButtonWrapper = props => <Button {...props} />;
+
+ButtonWrapper.defaultProps = {
   type: 'button',
   children: undefined,
+  color: 'default',
 };
 
-Button.propTypes = {
+ButtonWrapper.propTypes = {
   type: PropTypes.string,
   children: PropTypes.node,
+  color: PropTypes.oneOf(Object.values(ButtonCollors)),
 };
 
-export default Button;
+export default ButtonWrapper;
