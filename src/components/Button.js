@@ -8,6 +8,17 @@ const ButtonCollors = {
   danger: 'danger',
 };
 
+const getDarkColor = ({ theme, color }) => {
+  switch (color) {
+    case ButtonCollors.primary:
+      return theme.collors.primary.dark;
+    case ButtonCollors.danger:
+      return theme.collors.danger.dark;
+    default:
+      return '#5a6268';
+  }
+};
+
 const getMainColor = ({ theme, color }) => {
   switch (color) {
     case ButtonCollors.primary:
@@ -30,6 +41,16 @@ const Button = styled.button`
   background-color: ${getMainColor};
   border: 2px solid ${getMainColor};
   color: ${getColorText};
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &:hover:enabled {
+    background-color: ${getDarkColor};
+    border-color: ${getDarkColor};
+  }
 `;
 
 // just because storybook dont support styled components props
