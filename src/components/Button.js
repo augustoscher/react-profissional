@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-export const ButtonCollors = {
+export const ButtonColors = {
   default: 'default',
   primary: 'primary',
   danger: 'danger',
@@ -16,10 +16,10 @@ export const ButtonVariants = {
 
 const getDarkColor = ({ theme, color }) => {
   switch (color) {
-    case ButtonCollors.primary:
-      return theme.collors.primary.dark;
-    case ButtonCollors.danger:
-      return theme.collors.danger.dark;
+    case ButtonColors.primary:
+      return theme.colors.primary.dark;
+    case ButtonColors.danger:
+      return theme.colors.danger.dark;
     default:
       return '#5a6268';
   }
@@ -27,26 +27,35 @@ const getDarkColor = ({ theme, color }) => {
 
 const getMainColor = ({ theme, color }) => {
   switch (color) {
-    case ButtonCollors.primary:
-      return theme.collors.primary.main;
-    case ButtonCollors.danger:
-      return theme.collors.danger.main;
+    case ButtonColors.primary:
+      return theme.colors.primary.main;
+    case ButtonColors.danger:
+      return theme.colors.danger.main;
     default:
       return '#e0e0e0';
   }
 };
 
-const getColorText = props => props.theme.collors.primary.text;
+const getColorText = ({ theme, color }) => {
+  switch (color) {
+    case ButtonColors.primary:
+      return theme.colors.primary.text;
+    case ButtonColors.danger:
+      return theme.colors.danger.text;
+    default:
+      return '#212121';
+  }
+};
 
 const getOutlinedText = props => {
-  if (props.color === ButtonCollors.default) {
+  if (props.color === ButtonColors.default) {
     return '#212121';
   }
   return getMainColor(props);
 };
 
 const getLinkedText = props => {
-  if (props.color === ButtonCollors.default) {
+  if (props.color === ButtonColors.default) {
     return '#757575';
   }
   return getMainColor(props);
@@ -118,7 +127,7 @@ ButtonWrapper.defaultProps = {
 ButtonWrapper.propTypes = {
   type: PropTypes.string,
   children: PropTypes.node,
-  color: PropTypes.oneOf(Object.values(ButtonCollors)),
+  color: PropTypes.oneOf(Object.values(ButtonColors)),
   variant: PropTypes.oneOf(Object.values(ButtonVariants)),
 };
 

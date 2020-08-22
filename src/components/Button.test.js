@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '../test-utils';
-import Button, { ButtonCollors, ButtonVariants } from './Button';
+import Button, { ButtonColors, ButtonVariants } from './Button';
 
 test('renders text', () => {
   const { getByText } = render(<Button>Click here</Button>);
@@ -18,7 +18,7 @@ test('triggers event on click', () => {
 });
 
 // [["primary"], ["default"], ["danger"]]
-test.each(Object.values(ButtonCollors).map(item => [item]))(
+test.each(Object.values(ButtonColors).map(item => [item]))(
   'renders with color %s',
   color => {
     // testando com styled
