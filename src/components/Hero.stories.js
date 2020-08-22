@@ -5,6 +5,7 @@ import Hero from './Hero';
 import BgSoyHarvestImage from '../stories/assets/soy-harvest.jpg';
 import BgFieldImage from '../stories/assets/field.jpg';
 import Heading from './Heading';
+import Button from './Button';
 
 export default {
   title: 'Components/Hero',
@@ -37,7 +38,9 @@ export const withList = () => (
       <li>Especializada em culturas como soja, trigo e milho.</li>
       <li>Serviço de transportes gerais e de implementos agrícolas.</li>
     </ul>
-    <button>Entre em contato</button>
+    <Button color="primary" variant="outlined">
+      Entre em contato
+    </Button>
   </Hero>
 );
 
@@ -54,6 +57,8 @@ export const withCompanyTitle = () => (
       <li>Especializada em culturas como soja, trigo e milho.</li>
       <li>Serviço de transportes gerais e de implementos agrícolas.</li>
     </ul>
-    <button>Entre em contato</button>
+    <Button color="primary" variant="outlined">
+      Entre em contato
+    </Button>
   </Hero>
 );
