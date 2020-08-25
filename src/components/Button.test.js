@@ -17,7 +17,7 @@ test('triggers event on click', () => {
   expect(handleClick).toBeCalled();
 });
 
-// [["primary"], ["default"], ["danger"]]
+//required format: [["primary"], ["default"], ["danger"]]
 test.each(Object.values(ButtonColors).map(item => [item]))(
   'renders with color %s',
   color => {
