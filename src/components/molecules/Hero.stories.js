@@ -2,13 +2,13 @@ import React from 'react';
 import { text } from '@storybook/addon-knobs';
 
 import Hero from './Hero';
-import BgSoyHarvestImage from '../stories/assets/soy-harvest.jpg';
-import BgFieldImage from '../stories/assets/field.jpg';
-import Heading from './Heading';
-import Button from './Button';
+import BgSoyHarvestImage from '../../stories/assets/soy-harvest.jpg';
+import BgFieldImage from '../../stories/assets/field.jpg';
+import Heading from '../atoms/Heading';
+import Button from '../atoms/Button';
 
 export default {
-  title: 'Components/Hero',
+  title: 'Components/Molecules/Hero',
   component: Hero,
 };
 
