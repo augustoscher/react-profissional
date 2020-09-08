@@ -20,6 +20,8 @@ Open VSCode and follow steps:
 2. Type javascript on open box
 3. Add following custom snippet to create react component
 
+React Component and Component Storybook
+
 ```javascript
 {
   "React Component": {
@@ -38,6 +40,24 @@ Open VSCode and follow steps:
       "${TM_FILENAME_BASE}.propTypes = {}",
       "",
       "export default ${TM_FILENAME_BASE};"
+    ]
+  }
+
+  "Component Storybook": {
+    "prefix": "mycs",
+    "description": "Component Storybook",
+    "body": [
+      "import React from 'react';",
+      "import ${TM_FILENAME_BASE/(.stories)//} from './${TM_FILENAME_BASE/(.stories)//}';",
+      "",
+      "export default {",
+      "  title: \"Components/${1|Atoms, Molecules, Organisms, Pages, Templates|}/${TM_FILENAME_BASE/(.stories)//}\",",
+      "  component: ${TM_FILENAME_BASE/(.stories)//},",
+      "};",
+      "",
+      "export const usage = () => (",
+      "  <${TM_FILENAME_BASE/(.stories)//}>$2</${TM_FILENAME_BASE/(.stories)//}>",
+      ");",
     ]
   }
 }
