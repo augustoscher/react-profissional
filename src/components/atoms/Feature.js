@@ -1,12 +1,59 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+const Root = styled.div`
+  text-align: center;
+
+  & h5 {
+    margin: 16px 0;
+  }
+
+  & p {
+    margin: 0;
+  }
+`;
+
+const getPrimaryColor = props => props.theme.colors.primary.main;
+
+const RootIcon = styled.div`
+  display: inline-block;
+  width: 116px;
+  height: 116px;
+  padding: 8px;
+  border-radius: 50%;
+
+  &:hover {
+    border: 1px solid ${getPrimaryColor};
+
+    /* pega qqer filho abaixo do elemento RootIcon */
+    > * {
+      color: #fff;
+      background-color: ${getPrimaryColor};
+    }
+  }
+`;
+
+const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e9e9e9;
+  border-radius: 50%;
+  font-size: 32px;
+  width: 100%;
+  height: 100%;
+  color: ${getPrimaryColor};
+`;
+
 const Feature = ({ icon, title, children }) => (
-  <div>
-    <div>{icon}</div>
+  <Root>
+    <RootIcon>
+      <IconContainer>{icon}</IconContainer>
+    </RootIcon>
     <h5>{title}</h5>
     <div>{children}</div>
-  </div>
+  </Root>
 );
 
 Feature.defaultProps = {
