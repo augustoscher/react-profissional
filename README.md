@@ -43,6 +43,25 @@ React Component and Component Storybook
     ]
   }
 
+  "Component Unit Test": {
+    "prefix": "mycut",
+    "description": "Component Unit Test",
+    "body": [
+      "import React from 'react';",
+      "import { render } from 'test-utils';",
+      "",
+      "import ${TM_FILENAME_BASE/(.test)//} from './${TM_FILENAME_BASE/(.test)//}';",
+      "",
+      "test('renders', () => {",
+      "  const { asFragment } = render(",
+      "    <${TM_FILENAME_BASE/(.test)//}></${TM_FILENAME_BASE/(.test)//}>",
+      "  );",
+      "",
+      "  expect(asFragment()).toMatchSnapshot();",
+      "});"
+    ]
+  },
+
   "Component Storybook": {
     "prefix": "mycs",
     "description": "Component Storybook",
