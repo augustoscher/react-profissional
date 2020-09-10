@@ -1,7 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { breakAt, BreakpointSizes } from '../../styles/Breakpoints';
+
+/* Conditional: Adds grid-template-columns only if props.sm is present */
+const breakColumnAt = size => props =>
+  props[size] &&
+  css`
+    /* defining columns by screen size*/
+    ${breakAt(BreakpointSizes[size])} {
+      grid-template-columns: repeat(${props => props[size]}, 1fr);
+    }
+  `;
 
 const Grid = styled.div`
   display: grid;
@@ -10,22 +20,10 @@ const Grid = styled.div`
   /* default value */
   grid-template-columns: 1fr;
 
-  /* defining columns by screen size*/
-  ${breakAt(BreakpointSizes.sm)} {
-    grid-template-columns: repeat(${props => props.sm}, 1fr);
-  }
-
-  ${breakAt(BreakpointSizes.md)} {
-    grid-template-columns: repeat(${props => props.md}, 1fr);
-  }
-
-  ${breakAt(BreakpointSizes.lg)} {
-    grid-template-columns: repeat(${props => props.lg}, 1fr);
-  }
-
-  ${breakAt(BreakpointSizes.xl)} {
-    grid-template-columns: repeat(${props => props.xl}, 1fr);
-  }
+  ${breakColumnAt('sm')}
+  ${breakColumnAt('md')}
+  ${breakColumnAt('lg')}
+  ${breakColumnAt('xl')}
 `;
 
 Grid.defaultProps = {
