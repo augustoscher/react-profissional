@@ -2,11 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import { breakAt, BreakpointSizes } from '../../styles/Breakpoints';
+
 const Root = styled.div`
   text-align: center;
 
   & h5 {
     margin: 16px 0;
+    /* 1.2rem (font-size) * 1.3 (line-height) * 2 (line numbers) = 3.12rem*/
+    min-height: 3.12rem;
+
+    ${breakAt(BreakpointSizes.lg)} {
+      /* 1.5rem (font-size) * 1.3 (line-height) * 2 (line numbers) = 3.9rem*/
+      min-height: 3.9rem;
+    }
   }
 
   & p {

@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { FaCar, FaKey, FaProjectDiagram, FaMapMarkerAlt } from 'react-icons/fa';
 import Feature from './Feature';
+import Grid from './Grid';
 
 export default {
   title: 'Components/Atoms/Feature',
@@ -14,12 +14,8 @@ export const usage = () => (
   </Feature>
 );
 
-const Grid = styled.div`
-  display: flex;
-`;
-
 export const withGrid = () => (
-  <Grid>
+  <Grid sm={2} md={4}>
     <Feature icon={<FaKey />} title="Variada frota de colheitadeiras">
       <p>
         Temos variada frota de colheitadeiras. Nos ajustamos de acordo com sua
