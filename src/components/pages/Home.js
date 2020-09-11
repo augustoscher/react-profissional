@@ -36,7 +36,7 @@ const Home = () => (
             sua necessidade de colheita.
           </p>
         </Feature>
-        <Feature icon={<FaCar />} title="Transporte de implementos agrícolas">
+        <Feature icon={<FaCar />} title="Transporte de implementos">
           <p>
             Transportamos com agilidade e segurança seus implementos agrícolas,
             escavadeiras, caminhões entre outros.
