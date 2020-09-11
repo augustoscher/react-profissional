@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { breakAt, BreakpointSizes } from '../../styles/Breakpoints';
+
+import Container from '../atoms/Container';
 
 const Root = styled.div`
   color: #fff;
@@ -13,21 +14,6 @@ const Root = styled.div`
     background-position: center;
     background-blend-mode: overlay;
   `}
-`;
-
-const Container = styled.div`
-  width: 100%;
-  padding: 0 8px;
-
-  ${breakAt(BreakpointSizes.sm)} {
-    padding: 0 16px;
-  }
-
-  ${breakAt(BreakpointSizes.lg)} {
-    max-width: 1140px;
-    padding: 0;
-    margin: 0 auto;
-  }
 `;
 
 const Content = styled.div`
