@@ -7,7 +7,7 @@ import Heading from '../atoms/Heading';
 import Button from '../atoms/Button';
 import Grid from '../atoms/Grid';
 import Feature from '../atoms/Feature';
-import Container from '../atoms/Container';
+import Section from '../molecules/Section';
 import { FaCar, FaKey, FaProjectDiagram, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Home = () => (
@@ -15,8 +15,8 @@ const Home = () => (
     <Hero image={BgSoyHarvestImage}>
       <Heading>
         <h1>
-          <strong>TR</strong> Transportes
-          <br />e Colheitas
+          <strong>TR</strong> Colheitas
+          <br />e Transportes
         </h1>
       </Heading>
       <ul>
@@ -28,7 +28,7 @@ const Home = () => (
         Entre em contato
       </Button>
     </Hero>
-    <Container>
+    <Section>
       <Grid sm={2} md={4}>
         <Feature icon={<FaKey />} title="Variada frota de colheitadeiras">
           <p>
@@ -56,7 +56,7 @@ const Home = () => (
           </p>
         </Feature>
       </Grid>
-    </Container>
+    </Section>
   </>
 );
 
