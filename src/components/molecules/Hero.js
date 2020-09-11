@@ -17,6 +17,9 @@ const Root = styled.div`
 `;
 
 const Content = styled.div`
+  /* makes div not use his default 100% width */
+  display: inline-block;
+
   p,
   li {
     font-size: 20px;
