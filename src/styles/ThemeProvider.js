@@ -43,7 +43,7 @@ const ThemeProvider = ({ theme, children }) => (
 );
 
 ThemeProvider.defaultProps = {
-  theme: 'ocean',
+  theme: 'light',
 };
 
 export default ThemeProvider;

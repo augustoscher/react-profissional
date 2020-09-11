@@ -1,26 +1,62 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Hero from './components/molecules/Hero';
+import BgSoyHarvestImage from './assets/soy-harvest.jpg';
+import Heading from './components/atoms/Heading';
+import Button from './components/atoms/Button';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+import Grid from './components/atoms/Grid';
+import Feature from './components/atoms/Feature';
+import { FaCar, FaKey, FaProjectDiagram, FaMapMarkerAlt } from 'react-icons/fa';
+
+import ThemeProvider from './styles/ThemeProvider';
+import GlobalStyle from './styles/GlobalStyle';
+
+const App = () => (
+  <ThemeProvider>
+    <GlobalStyle />
+    <Hero image={BgSoyHarvestImage}>
+      <Heading>
+        <h1>
+          <strong>TR</strong> Transportes
+          <br />e Colheitas
+        </h1>
+      </Heading>
+      <ul>
+        <li>Serviço de preparação de terreno, colheita e plantio.</li>
+        <li>Especializada em culturas como soja, trigo e milho.</li>
+        <li>Serviço de transportes gerais e de implementos agrícolas.</li>
+      </ul>
+      <Button color="primary" variant="outlined">
+        Entre em contato
+      </Button>
+    </Hero>
+    <Grid sm={2} md={4}>
+      <Feature icon={<FaKey />} title="Variada frota de colheitadeiras">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Temos variada frota de colheitadeiras. Nos ajustamos de acordo com sua
+          necessidade de colheita.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      </Feature>
+      <Feature icon={<FaCar />} title="Transporte de implementos agrícolas">
+        <p>
+          Transportamos com agilidade e segurança seus implementos agrícolas,
+          escavadeiras, caminhões entre outros.
+        </p>
+      </Feature>
+      <Feature icon={<FaMapMarkerAlt />} title="Plantamos sua lavoura">
+        <p>
+          Contamos com todos os implementos necessários para plantio de sua
+          lavoura.
+        </p>
+      </Feature>
+      <Feature icon={<FaProjectDiagram />} title="Confiança e experiência">
+        <p>
+          Possuímos mais de 25 anos de experiência na prestação de serviços de
+          transportes, plantio e colheitas de lavouras próprias e de terceiros.
+        </p>
+      </Feature>
+    </Grid>
+  </ThemeProvider>
+);
 
 export default App;
