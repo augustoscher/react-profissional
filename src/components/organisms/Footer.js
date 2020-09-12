@@ -14,6 +14,7 @@ const Root = styled.footer`
   h6 {
     color: #fff;
     margin-top: 0;
+    text-transform: uppercase;
   }
 `;
 
