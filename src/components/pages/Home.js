@@ -3,6 +3,7 @@ import React from 'react';
 
 import Hero from '../molecules/Hero';
 import BgSoyHarvestImage from '../../assets/soy-harvest.jpg';
+import AboutVideo from '../../assets/corn-harvest.mp4';
 import Heading from '../atoms/Heading';
 import Button from '../atoms/Button';
 import Grid from '../atoms/Grid';
@@ -63,9 +64,26 @@ const Home = () => (
       </Heading>
     </Section>
     <Section>
-      <Heading>
-        <h2>TR Tranportes e Colheitas</h2>
-      </Heading>
+      <Grid md={2}>
+        <div>
+          <Heading>
+            <h2>TR Colheitas e Tranportes</h2>
+          </Heading>
+          <p>
+            Idealizada pelo empresário Quiliano Rauber, a TR Colheitas e
+            Transportes, nasceu no ano de 1985 no município de Salvador das
+            Missões, RS. Desde então, presta serviços de colheitas, plantio e
+            transportes nos estados do Rio Grande do Sul, Mato Grosso do Sul,
+            Mato Grosso e Goias.
+          </p>
+          <div>
+            <Button color="primary">Saiba Mais</Button>
+          </div>
+        </div>
+        <div>
+          <video src={AboutVideo} width="100%" autoPlay loop></video>
+        </div>
+      </Grid>
     </Section>
     <Section inverse>
       <Heading>

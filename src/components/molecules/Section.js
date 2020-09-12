@@ -12,6 +12,10 @@ const Content = styled.div`
     css`
       background-color: #f7f7f7;
     `}
+
+  h2 {
+    margin-top: 0;
+  }
 `;
 
 const Section = ({ inverse, children }) => (
