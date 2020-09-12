@@ -9,6 +9,7 @@ import Button from '../atoms/Button';
 import Grid from '../atoms/Grid';
 import Feature from '../atoms/Feature';
 import Section from '../molecules/Section';
+import Footer from '../organisms/Footer';
 import { FaCar, FaKey, FaProjectDiagram, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Home = () => (
@@ -87,9 +88,10 @@ const Home = () => (
     </Section>
     <Section inverse>
       <Heading>
-        <h2>Dúvidas recorrentes</h2>
+        <h2>Dúvidas frequentes</h2>
       </Heading>
     </Section>
+    <Footer />
   </>
 );
 
