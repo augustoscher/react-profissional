@@ -22,7 +22,7 @@ export const usage = () => (
         </Heading>
         <p>Nostrud nisi veniam do veniam ea sunt ipsum do.</p>
         <div>
-          <Button variant="link" color="primary">
+          <Button variant="linked" color="primary">
             Saiba mais
           </Button>
         </div>
@@ -41,7 +41,7 @@ export const withImage = () => (
         </Heading>
         <p>Nostrud nisi veniam do veniam ea sunt ipsum do.</p>
         <div>
-          <Button variant="link" color="primary">
+          <Button variant="linked" color="primary">
             Saiba mais
           </Button>
         </div>
@@ -60,7 +60,7 @@ export const withImage2 = () => (
         </Heading>
         <p>Nostrud nisi veniam do veniam ea sunt ipsum do.</p>
         <div>
-          <Button variant="link" color="primary">
+          <Button variant="linked" color="primary">
             Saiba mais
           </Button>
         </div>
