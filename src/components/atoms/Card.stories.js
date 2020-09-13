@@ -9,6 +9,7 @@ import ImageMedia from '../../stories/assets/corn-harvest.jpg';
 export default {
   title: 'Components/Atoms/Card',
   component: Card,
+  subcomponents: { CardBody, CardMedia },
 };
 
 export const usage = () => (

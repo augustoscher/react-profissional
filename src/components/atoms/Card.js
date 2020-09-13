@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Root = styled.div`
   background-color: #fff;
@@ -17,6 +17,14 @@ const StyledBody = styled.div`
 
 export const CardBody = ({ children }) => <StyledBody>{children}</StyledBody>;
 
+CardBody.defaultProps = {
+  children: undefined,
+};
+
+CardBody.propTypes = {
+  children: PropTypes.node,
+};
+
 const StyledMedia = styled.div`
   background-image: url(${props => props.image});
   position: center center;
@@ -26,6 +34,17 @@ const StyledMedia = styled.div`
 
 export const CardMedia = ({ image }) => <StyledMedia image={image} />;
 
+CardMedia.defaultProps = {
+  image: undefined,
+};
+
+CardMedia.propTypes = {
+  /*
+  Image URL
+  */
+  children: PropTypes.string,
+};
+
 const Card = ({ children }) => (
   <Root>
     <div></div>
@@ -33,8 +52,12 @@ const Card = ({ children }) => (
   </Root>
 );
 
-// Card.defaultProps = {};
+Card.defaultProps = {
+  children: undefined,
+};
 
-// Card.propTypes = {};
+Card.propTypes = {
+  children: PropTypes.node,
+};
 
 export default Card;
