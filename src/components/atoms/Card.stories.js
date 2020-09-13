@@ -4,7 +4,8 @@ import Section from '../molecules/Section';
 
 import Heading from '../atoms/Heading';
 import Button from '../atoms/Button';
-import ImageMedia from '../../stories/assets/corn-harvest.jpg';
+import CornHarvest from '../../stories/assets/corn-harvest.jpg';
+import ValtraMachine from '../../stories/assets/valtra.jpg';
 
 export default {
   title: 'Components/Atoms/Card',
@@ -33,7 +34,26 @@ export const usage = () => (
 export const withImage = () => (
   <Section inverse>
     <Card>
-      <CardMedia image={ImageMedia} />
+      <CardMedia image={CornHarvest} />
+      <CardBody>
+        <Heading>
+          <h6>Colheitas</h6>
+        </Heading>
+        <p>Nostrud nisi veniam do veniam ea sunt ipsum do.</p>
+        <div>
+          <Button variant="link" color="primary">
+            Saiba mais
+          </Button>
+        </div>
+      </CardBody>
+    </Card>
+  </Section>
+);
+
+export const withImage2 = () => (
+  <Section inverse>
+    <Card>
+      <CardMedia image={ValtraMachine} />
       <CardBody>
         <Heading>
           <h6>Colheitas</h6>
