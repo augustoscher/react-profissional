@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from 'test-utils';
+import { render, screen, fireEvent } from 'test-utils';
 
 import ProductGrid from './ProductGrid';
 
@@ -21,14 +21,23 @@ test('match snapshot', () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-test.each([
+describe.each([
   [1, 1],
   [2, 2],
   [3, 3],
   [4, 3],
   [6, 3],
-])('with %i products should render %i product(s)', (size, expected) => {
-  render(<ProductGrid products={buildProducts(size)} />);
+])('with %i products', (size, showOnly) => {
+  test(`should render ${showOnly} product(s)`, () => {
+    render(<ProductGrid products={buildProducts(size)} />);
 
-  expect(screen.getAllByRole('heading').length).toEqual(expected);
+    expect(screen.getAllByRole('heading').length).toEqual(showOnly);
+  });
+
+  test('show all products when button is clicked', async () => {
+    render(<ProductGrid products={buildProducts(size)} />);
+
+    await fireEvent.click(screen.getByText('Lista completa de serviços'));
+    expect(screen.getAllByRole('heading').length).toEqual(size);
+  });
 });
