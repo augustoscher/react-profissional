@@ -53,6 +53,7 @@ CardMedia.propTypes = {
 const StyledCard = styled.div`
   background-color: #fff;
   border-radius: 4px;
+  overflow: hidden;
 `;
 
 const Card = ({ children }) => (
