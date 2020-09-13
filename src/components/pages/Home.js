@@ -10,7 +10,50 @@ import Grid from '../atoms/Grid';
 import Feature from '../atoms/Feature';
 import Section from '../molecules/Section';
 import Footer from '../organisms/Footer';
+import ProductGrid from '../organisms/ProductGrid';
 import { FaCar, FaKey, FaProjectDiagram, FaMapMarkerAlt } from 'react-icons/fa';
+
+import CornHarvest from '../../assets/corn-harvest.jpg';
+import ValtraMachine from '../../assets/valtra.jpg';
+import Harvester from '../../assets/harvester.jpg';
+
+const products = [
+  {
+    id: 1,
+    title: 'Colheita de milho',
+    image: CornHarvest,
+    summary:
+      'Excepteur excepteur dolor velit voluptate nostrud qui in aute dolor labore. Proident pariatur enim proident i.',
+  },
+  {
+    id: 2,
+    title: 'Colheita de soja',
+    image: ValtraMachine,
+    summary:
+      'Excepteur excepteur dolor velit voluptate nostrud qui in aute dolor labore. Proident pariatur enim proident i.',
+  },
+  {
+    id: 3,
+    title: 'Colheita de trigo',
+    image: Harvester,
+    summary:
+      'Excepteur excepteur dolor velit voluptate nostrud qui in aute dolor labore. Proident pariatur enim proident i.',
+  },
+  {
+    id: 4,
+    title: 'Transportes',
+    image: CornHarvest,
+    summary:
+      'Excepteur excepteur dolor velit voluptate nostrud qui in aute dolor labore. Proident pariatur enim proident i.',
+  },
+  {
+    id: 5,
+    title: 'Plantio',
+    image: ValtraMachine,
+    summary:
+      'Excepteur excepteur dolor velit voluptate nostrud qui in aute dolor labore. Proident pariatur enim proident i.',
+  },
+];
 
 const Home = () => (
   <>
@@ -63,6 +106,7 @@ const Home = () => (
       <Heading>
         <h2>Conheça nossos serviços</h2>
       </Heading>
+      <ProductGrid products={products} />
     </Section>
     <Section>
       <Grid md={2}>
