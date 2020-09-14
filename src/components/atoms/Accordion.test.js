@@ -45,7 +45,23 @@ describe('When is controlled', () => {
       expect(screen.queryByText(text)).toBeInTheDocument();
     });
 
-    test('hide children on click', () => {
+    test('triggers onChange when item is clicked', async () => {
+      const handleChange = jest.fn();
+
+      render(
+        <Accordion open title={title} onChange={handleChange}></Accordion>
+      );
+      await fireEvent.click(screen.getByText(title));
+
+      expect(handleChange).toBeCalledTimes(1);
+    });
+
+    test('triggers default onChange when item is clicked', async () => {
+      render(<Accordion open title={title}></Accordion>);
+      await fireEvent.click(screen.getByText(title));
+    });
+
+    test('hide children when open changes to false', () => {
       const { rerender } = render(
         <Accordion open title={title}>
           {text}
