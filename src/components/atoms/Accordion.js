@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { MdExpandMore, MdExpandLess } from 'react-icons/md';
@@ -8,6 +8,20 @@ const Root = styled.div`
   border: 1px solid #e0e0e0;
   border-left: 5px solid ${props => props.theme.colors.primary.main};
   background-color: #fff;
+
+  ${props =>
+    props.open &&
+    css`
+      margin: 16px 0;
+    `}
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:first-child {
+    margin-bottom: 0;
+  }
 `;
 const Head = styled.div`
   display: flex;
@@ -35,7 +49,7 @@ const Accordion = ({ title, children }) => {
     setOpen(!open);
   };
   return (
-    <Root>
+    <Root open={open}>
       <Head role="button" onClick={handleClick}>
         <h6>{title}</h6>
         {open ? <MdExpandLess /> : <MdExpandMore />}
