@@ -44,7 +44,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --max-warnings=0",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "start-build": "yarn serve -s build"
   },
   "eslintConfig": {
     "extends": "react-app"

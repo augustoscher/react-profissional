@@ -1,0 +1,15 @@
+import React from 'react';
+import Accordion from './Accordion';
+
+export default {
+  title: 'Components/Atoms/Accordion',
+  component: Accordion,
+};
+
+export const usage = () => (
+  <Accordion title="Quais tipos e tamanhos de plataformas?">
+    Cillum Lorem ex ex deserunt ea et Lorem adipisicing elit nostrud ullamco.
+    Magna reprehenderit fugiat ea amet aliquip magna. Occaecat aliqua est qui
+    enim consectetur do et. Culpa non id tempor enim incididunt.
+  </Accordion>
+);
