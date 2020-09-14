@@ -89,15 +89,3 @@ test('closes accordion when it is open and it clicks on it', async () => {
   expect(screen.queryByText('Child 1')).not.toBeInTheDocument();
   expect(screen.queryByText('Child 2')).not.toBeInTheDocument();
 });
-
-// test('renders with children', () => {
-//   render(
-//     <AccordionGroup>
-//       <Accordion open title={title}>
-//         {text}
-//       </Accordion>
-//     </AccordionGroup>
-//   );
-
-//   expect(screen.getByText(text)).toBeInTheDocument();
-// });
