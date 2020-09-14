@@ -41,6 +41,7 @@ exports[`match snapshot 1`] = `
 .c1 {
   background-color: #fff;
   border-radius: 4px;
+  overflow: hidden;
 }
 
 .c4 h1,
