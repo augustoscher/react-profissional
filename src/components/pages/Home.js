@@ -11,8 +11,7 @@ import Feature from '../atoms/Feature';
 import Section from '../molecules/Section';
 import Footer from '../organisms/Footer';
 import ProductGrid from '../organisms/ProductGrid';
-import Accordion from '../atoms/Accordion';
-import AccordionGroup from '../atoms/AccordionGroup';
+import Accordion, { AccordionGroup } from '../atoms/Accordion';
 import { FaCar, FaKey, FaProjectDiagram, FaMapMarkerAlt } from 'react-icons/fa';
 
 import CornHarvest from '../../assets/corn-harvest.jpg';
