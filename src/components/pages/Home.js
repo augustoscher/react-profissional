@@ -148,6 +148,12 @@ const Home = () => (
           aliqua est qui enim consectetur do et. Culpa non id tempor enim
           incididunt.
         </Accordion>
+        <Accordion title="Como faço para efetivar a contratação?">
+          Cillum Lorem ex ex deserunt ea et Lorem adipisicing elit nostrud
+          ullamco. Magna reprehenderit fugiat ea amet aliquip magna. Occaecat
+          aliqua est qui enim consectetur do et. Culpa non id tempor enim
+          incididunt.
+        </Accordion>
       </AccordionGroup>
     </Section>
     <Footer />
