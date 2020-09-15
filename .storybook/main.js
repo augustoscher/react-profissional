@@ -13,6 +13,13 @@ module.exports = {
     '@storybook/preset-create-react-app',
     '@storybook/addon-viewport',
     '@storybook/addon-docs',
+    // {
+    //   name: '@storybook/addon-docs',
+    //   options: {
+    //     configureJSX: true,
+    //   }
+    // },
+    '@storybook/addon-controls',
     '@storybook/addon-knobs',
   ],
 };
