@@ -16,5 +16,6 @@ jobs:
 
 workflows:
   ci:
-    - setup
+    jobs:
+      - setup
 
