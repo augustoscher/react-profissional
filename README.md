@@ -13,7 +13,7 @@ React Profissional course. Improving React skills.
 
 ### Storybook
 
-To run storybook, type:
+To run storybook, open terminal and type:
 
 ```bash
 yarn storybook
