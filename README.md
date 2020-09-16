@@ -1,5 +1,7 @@
 # react-profissional
 
+![CircleCI](https://img.shields.io/circleci/build/github/augustoscher/react-profissional)
+
 React Profissional course. Improving React skills.
 
 ## Links
