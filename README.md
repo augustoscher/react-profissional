@@ -1,6 +1,8 @@
 # react-profissional
 
 ![CircleCI](https://img.shields.io/circleci/build/github/augustoscher/react-profissional)
+![Codecov](https://img.shields.io/codecov/c/github/augustoscher/react-profissional)
+
 
 React Profissional course. Improving React skills.
 
