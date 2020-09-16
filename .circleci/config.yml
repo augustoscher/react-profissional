@@ -6,10 +6,10 @@ orbs:
 jobs:
   setup:
     docker:
-      - image: circleci/node12.18.3-browsers
+      - image: circleci/node:12.18.3-browsers
     steps:
       - checkout
-      - node/install-yarn: true
+      - node/install-yarn
       - run: node --version
       - run: yarn version
 
@@ -17,4 +17,3 @@ workflows:
   ci:
     jobs:
       - setup
-
