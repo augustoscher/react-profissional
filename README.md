@@ -1,13 +1,15 @@
 # react-profissional
 
 ![CircleCI](https://img.shields.io/circleci/build/github/augustoscher/react-profissional)
-![Codecov](https://img.shields.io/codecov/c/github/augustoscher/react-profissional)
+
+[![codecov](https://codecov.io/gh/augustoscher/react-profissional/branch/master/graph/badge.svg)](https://codecov.io/gh/augustoscher/react-profissional)
 
 React Profissional course. Improving React skills.
 
 ## Links
 
 [App](https://react-profissional.vercel.app/)
+
 [Storybook](https://www.chromatic.com/library?appId=5f601b7f82be0d00226cb172)
 
 ## Running

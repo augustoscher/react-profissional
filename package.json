@@ -1,6 +1,6 @@
 {
   "name": "react-profissional",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.11.1",
@@ -48,7 +48,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "start-build": "yarn serve -s build",
-    "chromatic": "chromatic --project-token sj6jbgqzvub"
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "eslintConfig": {
     "extends": "react-app"
